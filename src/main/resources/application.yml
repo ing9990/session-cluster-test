@@ -1,0 +1,20 @@
+server:
+  port: 8091
+  servlet:
+    session:
+      cookie:
+        path: /
+        name: JSESSIONID
+        http-only: true
+        # secure: true # ??? ??? ??? HTTPS? ???? ?? ??
+      timeout: 7200
+
+spring:
+  data:
+    redis:
+      host: localhost
+      port: 6379
+      password:
+  session:
+    redis:
+      repository-type: indexed
